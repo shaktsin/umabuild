@@ -1,0 +1,31 @@
+[project]
+name = "umabuild"
+version = "0.1.0"
+description = "CLI to generate and preview Expo apps from a README spec"
+authors = [
+    {name = "Shakti Singh",email = "shakti.cse09@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "typer>=0.12.0",
+    "rich>=13.7.0",
+    "pydantic>=2.6.0",
+    "requests>=2.31.0",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.4.0",
+]
+
+[project.scripts]
+umabuild = "umabuild.cli:app"
+
+[tool.poetry]
+packages = [{include = "umabuild", from = "src"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

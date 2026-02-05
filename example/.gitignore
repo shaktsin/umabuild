@@ -1,0 +1,7 @@
+app/
+.umabuild/
+node_modules/
+.expo/
+.expo-shared/
+web-build/
+dist/
